@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flos | Beauty Product</title>
+  <link rel="icon" href="product/images/c8578e6f9166c95dc806919e26d33a85 1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #792E9D;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: transparent;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-links a {
+  margin: 0 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: transparent;
+  animation: slideDown 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+
+
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #f90;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem;
+  color: #fff;
+}
+
+.hero-left .product-img {
+  max-width: 400px;
+   transform: translateY(-50px);
+}
+
+.hero-right {
+  max-width: 600px;
+  margin-top: -100px; /* Adjust as needed */
+}
+
+
+.delivery {
+  color: #fcb233;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-right h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buy-btn {
+  background-color: #f90;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #000;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.explore-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #b57fc7;
+  padding: 1.5rem 2rem;
+}
+
+.partners img {
+  max-height: 90px;
+}
+.logo img {
+  height: 40px; /* or any size that fits your navbar */
+}
+/* Fade-in & slide animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-left,
+.hero-right {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-left {
+  animation-delay: 0.2s;
+}
+
+.hero-right {
+  animation-delay: 0.4s;
+}
+.logo img {
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.1);
+}
+.nav-links a {
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #fcb233; /* golden glow */
+}
+.icon {
+  transition: transform 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+.login-btn {
+  transition: background-color 0.3s, transform 0.3s;
+}
+.login-btn:hover {
+  background-color: #cf1fd8;
+  transform: scale(1.05);
+}
+.buy-btn,
+.explore-btn {
+  transition: all 0.3s ease;
+}
+.buy-btn:hover {
+  background-color: #cf1fd8;
+  transform: translateY(-3px);
+}
+.explore-btn:hover {
+  background-color: #cf1fd8;
+  transform: translateY(-3px);
+}
+.partners img {
+  transition: transform 0.3s ease;
+}
+.partners img:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.about-us {
+  background-color: #D1A9D6;
+  padding: 4rem 3rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
+  color: #000;
+  animation-delay: 0.2s;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.about-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  background-color: #cf1fd8;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+   opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.about-image img {
+  max-width: 390px; /* adjust as needed */
+  height: auto;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3));
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.product-section {
+  background-color: #822F99;
+  padding: 6rem 8% 0 8%;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+.product-image img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  transform: translateX(-30px);
+  filter: drop-shadow(8px 8px 18px rgba(0, 0, 0, 0.3));
+}
+
+.product-text {
+  flex: 1;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.product-text h3 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.product-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #f4e9f6;
+}
+
+.product-text button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  width: 150px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  cursor: pointer;
+   transition: all 0.4s ease; /* smooth transition */
+}
+
+.product-text button:hover {
+  background-color: #cf1fd8;
+  transform: translateY(-3px); /* slightly more noticeable */
+}
+
+.wave-top-right {
+  position: absolute;
+  top: 10px;
+  left: 60%;
+  transform: translateX(30%);
+  width: 340px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wave-top-right img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.team-section {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000; /* Black color */
+  margin-bottom: 50px;
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: 150px; /* space between each card */
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 250px;
+  text-align: center;
+}
+
+.team-card img {
+  width: 250px;
+  height: 359px;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 5px 0 0;
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.newsletter-section {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.newsletter-left {
+  flex: 1;
+  background: #d6e3c3; /* fallback greenish tone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsletter-right {
+  flex: 1;
+  background-color: #7e3f98; /* purple tone */
+  color: #000;
+  position: relative;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter-right h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 0.5px solid #333;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.newsletter-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #2f9954;
+  transform: translateY(-5px);
+}
+
+/* Green diagonal pattern top-right */
+.green-pattern {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #99cc33,
+    #99cc33 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+.latest-blog {
+  padding: 80px 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.blog-title {
+    color: #000;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.blog-card {
+  max-width: 340px;
+  text-align: center;
+  
+}
+
+.blog-card img {
+  width: 100%;
+   height: 320px; /* Fixed height for uniformity */
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Hover Glow Effects - Image Only */
+.blog-card:nth-child(1):hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(128, 220, 150, 0.7); /* Greenish */
+}
+
+.blog-card:nth-child(2):hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(170, 130, 255, 0.7); /* Purple */
+}
+
+.blog-card:nth-child(3):hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 120, 50, 0.7); /* Orange */
+}
+
+.blog-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #333;
+}
+.footer-section {
+  background-color: #7e4bc4;
+  padding: 60px 40px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer {
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.footer-image {
+  width: 70%;
+  height: 70%;
+  object-fit: cover; /* full image visible */
+  border-radius: 0;
+  display: block;
+  margin-right: 0.5px;
+}
+
+
+.footer-heading {
+  text-align: right;
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.footer-columns {
+  display: flex;
+  text-align: right;
+  line-height: 1.6; /* reduce if still too spaced */
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffe281;
+}
+
+.footer-bottom {
+  display: flex;
+  line-height: 1.6; /* reduce if still too spaced */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: flex-end;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-bottom a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top:0.5px;
+  justify-content: flex-end;
+}
+
+.icon-square {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon-square:hover {
+  transform: scale(1.15);
+}
+footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+</style>
+<body>
+  <header class="navbar">
+    <div class="logo">
+  <img src="product/images/c8578e6f9166c95dc806919e26d33a85 1.png" alt="Flos Logo" />
+</div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Reviews</a>
+    </nav>
+    <div class="icons">
+      <img src="product/images/iconamoon_search-thin.png" alt="Search" class="icon" />
+      <img src="product/images/Group 21.png" alt="Cart" class="icon" />
+      <button class="login-btn">Log In</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <img src="product/images/b4806ec8477901e44f33ec684389505b 1.png" alt="Beauty Product" class="product-img" />
+    </div>
+    <div class="hero-right">
+      <p class="delivery">Fast Delivery</p>
+      <h1>Crafted with care, <br />made for your skin</h1>
+      <p class="desc">At our core, we believe soap should do more than just clean it should care. That’s why each bar is handmade with natural oils and skin-loving ingredients.</p>
+      <div class="buttons">
+        <button class="buy-btn">Buy now</button>
+        <button class="explore-btn">Explore more</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <img src="product/images/amazon-rebrand-2025_dezeen_2364_col_1-1 1.png" alt="Amazon" />
+    <img src="product/images/images 2.png" alt="Reliance Fresh" />
+    <img src="product/images/Flipkart-logo 1.png" alt="Flipkart" />
+    <img src="product/images/jabong-com-vector-logo 1.png" alt="Jabong" />
+    <img src="product/images/bigbasket-logo-png_seeklogo-409312 1.png" alt="Big Basket" />
+  </section>
+  <section class="about-us">
+  <div class="about-content">
+    <div class="about-text reveal">
+      <h2>About Us</h2>
+      <p>We’re a small team with a big love for clean, honest skincare. What started as a passion for natural ingredients turned into a mission to create soap that’s as kind to your skin as it is to the planet. Every bar we make is handcrafted in small batches using plant-based oils, essential oils, and botanicals.</p>
+      <p>No harsh chemicals, ever. We believe in keeping things simple, sustainable, and beautifully effective. Because your skin deserves the good stuff, naturally.</p>
+      <button class="about-btn reveal">Buy now</button>
+    </div>
+    <div class="about-image reveal">
+      <img src="product/images/13d1f2b2381c02d36005b9735c106f99 1.png" alt="Real Sensation Product" />
+    </div>
+  </div>
+</section>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+<section class="product-section">
+  <div class="product-row">
+    <!-- Decorative Wave -->
+    <div class="wave-top-right">
+      <img src="product/images/Waves.png" alt="Decorative wave" />
+    </div>
+
+    <!-- Image LEFT -->
+    <div class="product-image reveal">
+      <img src="product/images/d5d57dc02cfba45b7e4f2f0ec1e0b06b 1.png" alt="Nourishing Mineral Bath Salts" />
+    </div>
+
+    <!-- Text RIGHT -->
+    <div class="product-text reveal">
+      <h3>Nourishing Mineral<br>Bath Salts</h3>
+      <p>
+        Soak, relax, and restore with our Nourishing Mineral Bath Salts a calming blend
+        of mineral-rich salts and essential oils designed to ease tension and leave your
+        skin feeling soft and renewed.
+      </p>
+      <button>Buy now</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+<section class="team-section fade-in-section">
+  <h2>Our team</h2>
+  <div class="team-row">
+    <div class="team-card">
+      <img src="product/images/helen.png" alt="Helen">
+      <h4><b>Helen</b></h4>
+      <p>CEO | Head</p>
+    </div>
+    <div class="team-card">
+      <img src="product/images/linda.png" alt="Linda">
+      <h4><b>Linda</b></h4>
+      <p>CTO | Head Co-ordinator</p>
+    </div>
+    <div class="team-card">
+      <img src="product/images/natasha.png" alt="Natasha">
+      <h4><b>Natasha</b></h4>
+      <p>Product Manager</p>
+    </div>
+  </div>
+</section>
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Optional: only trigger once
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% is visible
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+<section class="newsletter-section">
+  <div class="newsletter-left">
+    <img src="product/images/f55e02cf8dc446960fdcd31770756753 1.png" alt="Coconut Product">
+  </div>
+
+  <div class="newsletter-right">
+    <div class="green-pattern"></div>
+    <h2>Subscribe To Our <br> Newsletter</h2>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your E-mail id" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+<section class="latest-blog">
+  <h2 class="blog-title">Our Latest Blog</h2>
+  <div class="blog-grid">
+    
+    <div class="blog-card">
+      <img src="product/images/2eb42f1228c3b9f98c241ae7db863052 1.png" alt="Blog Product 1">
+      <p>
+        Discover how to care for your skin naturally, the benefits of our ingredients,
+        and how we handcraft each product with purpose.
+      </p>
+    </div>
+
+    <div class="blog-card">
+      <img src="product/images/ea5150e1203e05d38def50bdce6b56f1 1.png" alt="Blog Product 2">
+      <p>
+        Explore natural ways to nourish your skin, learn about our pure ingredients,
+        and see the care that goes into every handcrafted product.
+      </p>
+    </div>
+
+    <div class="blog-card">
+      <img src="product/images/fd5ac48c55bf5e89ec4f8016452d5c55 1.png" alt="Blog Product 3">
+      <p>
+        Learn how simple, natural skincare makes a difference — with insights into
+        our process, our ingredients, and your skin’s everyday needs.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="footer-section">
+  <div class="footer-container">
+    <div class="footer-left">
+      <div class="logo">
+  <img src="product/images/c8578e6f9166c95dc806919e26d33a85 1.png" alt="Flos Logo" />
+</div>
+      <img src="product/images/0274ed6f27baa83a12074df4b0e279f0 1.png" alt="Products" class="footer-image" />
+    </div>
+
+    <div class="footer-right">
+      <h2 class="footer-heading">Where purity <br />meets purpose.</h2>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Log In</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Blog</h4>
+          <ul>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Cover</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">How it works</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Our Team</a></li>
+            <br><br>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">mailusfios@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+  <div class="social-icons">
+          <a href="#"><div class="icon-square" style="background:#d96e33;"></div></a>
+          <a href="#"><div class="icon-square" style="background:#d96e33;"></div></a>
+          <a href="#"><div class="icon-square" style="background:#d96e33;"></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
